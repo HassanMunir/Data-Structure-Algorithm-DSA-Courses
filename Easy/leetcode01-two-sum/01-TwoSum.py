@@ -20,19 +20,12 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         prevMap = {}
-        # Create a hashmap to store the diff of each number and its index
-
 
         for i,n in enumerate (nums):
-            # Calculate the diff needed to achieve the target
             diff = target - n
-
-            # Check if the diff exists in the hashmap
             if diff in prevMap:
-            # If yes, return the indices of the current number and its diff
                 return [prevMap [diff], i]
-            # Otherwise, add the current number and its index to the hashmap
+            
             prevMap [n] = i
         
-        #If no such pair is found, return an empty list
         return

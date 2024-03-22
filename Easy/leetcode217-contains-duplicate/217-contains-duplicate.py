@@ -13,15 +13,12 @@
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        # Create a set to store unique elements
         hashset = set()
 
-        # Iterate through the array
         for n in nums:
-            # If the current element is already in the set, return True (duplicate found)
             if n in hashset:
                 return True
-            # Otherwise, add the element to the set
+            
             hashset.add(n)
-        # If no duplicates found, return False
+        
         return False
