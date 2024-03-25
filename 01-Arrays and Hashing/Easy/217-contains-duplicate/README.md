@@ -1,13 +1,11 @@
 ## Explanation
 
-### Create a function containsDuplicate that takes an array 'nums' as input
+### hashset = set(): Initializes an empty set called hashset. A set is a data structure that stores unique elements, so duplicates are automatically eliminated when adding elements to it
 
-### Create an empty set 'hashset' to store unique elements from the array
+### for n in nums: Iterates over each element n in the input list nums
 
-### Iterate through the array using a 'for' loop. For each element num in the array
+### if n in hashset: Checks if the current element n is already in the hashset. If it is, it means that n is a duplicate, so the method returns True, indicating that the list contains duplicates
 
-### Check if the current element 'num' is already in the set 'hashset'. If it is, it means we have found a duplicate, so we return True
+### hashset.add(n): If the current element n is not in the hashset, it adds n to the set using the add method
 
-### If the current element 'num' is not in the set 'hashset', we add it to the set
-
-### If the loop completes without finding any duplicates, we return False
+### return False: If the loop completes without finding any duplicates (i.e., no duplicate elements are found during iteration), the method returns False, indicating that the list does not contain any duplicates

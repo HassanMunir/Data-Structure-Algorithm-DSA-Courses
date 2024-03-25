@@ -1,15 +1,29 @@
 ## Explanation
 
-### The function 'isAnagram' takes two strings 's' and 't' as input and returns 'True' if 's' and 't' are anagrams, otherwise False
+### The code begins with defining a class named Solution. This class seems to be intended for solving a specific problem, although the context isn't fully provided here
 
-### The first check compares the lengths of the strings. If they are not equal, they cannot be anagrams, so the function returns False
+### Inside the class Solution, there is a method isAnagram defined. This method takes in three parameters: self, s, and t
 
-### Hashmaps 'countS' and 'countT' are created to count the occurrences of characters in strings 's' and 't' respectively
+#### self: This parameter refers to the instance of the class. It's a standard practice in Python to include self as the first parameter in instance methods
 
-### The first loop iterates through each character in string s, updating the count of each character in the countS hashmap
+#### s: This parameter is expected to be a string
 
-### Similarly, the second loop iterates through each character in string t, updating the count of each character in the countT hashmap
+#### t: This parameter is also expected to be a string
 
-### After counting occurrences of characters in both strings, the function compares the counts of characters in both hashmaps. If any character count in s doesn't match its count in t, they are not anagrams, and the function returns False
+### The return type annotation -> bool indicates that this method is expected to return a boolean value (True or False)
 
-### If all characters have matching counts, the function returns True, indicating that the strings are anagrams
+### The first if condition checks whether the lengths of strings s and t are equal. If they are not, it immediately returns False, indicating that the strings cannot be anagrams if they have different lengths
+
+### Two dictionaries countS and countT are initialized. These dictionaries will be used to count occurrences of characters in strings s and t, respectively
+
+### The code iterates through the indices of the strings (assuming both strings are of the same length, as ensured by the length check)
+
+### For each character at index i in string s, it increments the count of that character in the countS dictionary
+
+### Similarly, for each character at index i in string t, it increments the count of that character in the countT dictionary
+
+### After counting occurrences of characters in both strings, the code iterates through the keys of countS
+
+### For each character c in countS, it checks whether the count of c in countS is equal to the count of c in countT. If not, it means the characters are not present in equal frequencies in both strings, so it returns False
+
+### If the code successfully passes through all characters and their counts are equal, it returns True, indicating that the strings are anagrams of each other
